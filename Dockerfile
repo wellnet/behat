@@ -21,10 +21,11 @@ RUN apk add --no-cache \
     && composer global require "hirak/prestissimo:^0.3"
 
 RUN mkdir /tests
+RUN mkdir /tests/artifacts
 ADD composer.json /tests/composer.json
 WORKDIR /tests
 
 # Install and initialize Behat, create folder for artifacts.
 RUN composer install
 
-CMD ["/tests/bin/behat"]
+CMD ["/tests/bin/behat", "-f", "pretty", "-o", "/tests/artifacts/pretty.out", "-f", "progress", "-o", "std"]
