@@ -1,5 +1,5 @@
 {
-  "name": "wellnetiamges/behat",
+  "name": "wellnetimages/behat",
   "minimum-stability": "stable",
   "require": {
     "behat/behat": "3.1.0",
