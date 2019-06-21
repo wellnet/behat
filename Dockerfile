@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.5
 MAINTAINER Luca Lusso <llusso@wellnet.it>
 
 # Install PHP7 with needed exstentions and composer with hirak/prestissimo.
@@ -26,6 +26,6 @@ ADD composer.json /tests/composer.json
 WORKDIR /tests
 
 # Install and initialize Behat, create folder for artifacts.
-RUN composer install
+RUN php -d memory_limit=-1 /usr/bin/composer install
 
 CMD ["/tests/bin/behat", "-f", "pretty", "-o", "/tests/artifacts/pretty.out", "-f", "progress", "-o", "std"]
