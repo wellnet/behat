@@ -23,7 +23,7 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/behat
+            wellnetimages/behat
           tag-sha: true
       -     
         name: Cache Docker layers
