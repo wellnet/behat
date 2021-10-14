@@ -1,0 +1,13 @@
+diff --git a/src/Formatter/Formatter.php b/src/Formatter/Formatter.php
+index 4f19ea4..4daed1e 100644
+--- a/src/Formatter/Formatter.php
++++ b/src/Formatter/Formatter.php
+@@ -133,6 +133,7 @@ class Formatter implements FormatterInterface
+             'tester.scenario_tested.after' => 'onAfterScenarioTested',
+             'tester.outline_tested.before' => 'onBeforeOutlineTested',
+             'tester.outline_tested.after' => 'onAfterOutlineTested',
++            'tester.step_tested.before' => 'onBeforeStepTested',
+             'tester.step_tested.after' => 'onAfterStepTested',
+         );
+     }
+
