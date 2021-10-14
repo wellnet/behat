@@ -17,5 +17,12 @@
   },
   "config": {
     "bin-dir": "bin/"
+  },
+  "extra": {
+    "patches": {
+      "vanare/behat-cucumber-json-formatter": {
+        "Fix duration output": "patches/fix_duration_output.patch"
+      }
+    }
   }
 }
